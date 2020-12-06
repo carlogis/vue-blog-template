@@ -21,15 +21,15 @@ module.exports = {
     devServer: {
         port: 8003,
         open: true,
-        // proxy: {
-        //     '/api': {
-        //         target: '',
-        //         changeOrigin: true,
-        //         pathRewrite: {
-        //             '^/api': ''
-        //         }
-        //     }
-        // }
+        proxy: {
+            '/file': {
+                target: 'http://10.36.7.145/gateway/kbs/',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/file': ''
+                }
+            }
+        }
     },
     configureWebpack: {
         name: name,

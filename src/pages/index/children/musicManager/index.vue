@@ -74,12 +74,22 @@
                 </el-pagination>
             </div>
         </div>
+
+        <el-button @click="HackimageIdentified" type="primany"></el-button>
+
+        <imageIdentified ref="idenf">
+        </imageIdentified>
+
+        
+
     </div>
 </template>
 <script>
 import * as filmApi from '@/api/musicApi'
+import imageIdentified from "./imageIdentified";
 export default {
     name: 'musicManager',
+    components: { imageIdentified },
     data() {
         return {
             loading: false,
@@ -115,6 +125,13 @@ export default {
         },
         handleSizeChange(){
 
+        },
+        handleCurrentChange(){
+
+        },
+        HackimageIdentified(){
+            console.log(this.$refs.idenf);
+            this.$refs.idenf.setInit("测试图片","/file/1607239625399_20191017120834765.jpg");
         }
     }
 }

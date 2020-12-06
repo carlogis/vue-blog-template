@@ -73,14 +73,21 @@
             @close="editClose"
             @success="editSuccess"
             ref="edit"/>
+
+        <imageIdentified>
+        </imageIdentified>
+
+
+
     </div>
 </template>
 <script>
 import * as filmApi from '@/api/filmApi'
 import filmEdit from "./edit";
+import imageIdentified from "./imageIdentified";
 export default {
     name: 'filmManager',
-    components: {filmEdit},
+    components: {filmEdit , imageIdentified},
     data() {
         return {
             dialog: {

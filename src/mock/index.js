@@ -4,7 +4,7 @@ var Mock = require('mockjs/dist/mock-min.js')
 let base_mock_url = process.env.VUE_APP_BASE_API
 
 Mock.mock(base_mock_url + '/api/login', {
-    'token': Mock.Random.string(20)
+    'token': 'd8259c57-73f1-4b66-8733-8da0e7655bd0'
 })
 Mock.mock(base_mock_url + '/api/user', {
     code: 200,
